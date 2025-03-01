@@ -87,7 +87,7 @@
 &kp LS(GRAVE)  &kp LC(SLASH)  &kp UP    &trans     &trans  &trans    &mmv MOVE_DOWN   &kp PG_UP         &kp END            &kp UP          &kp HOME         &kp MINUS       &kp EQUAL
 &kp LEFT_GUI   &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans    &mmv MOVE_LEFT   &kp PG_DN         &kp LEFT           &kp DOWN        &kp RIGHT        &kp UNDERSCORE  &kp PLUS
 &trans         &trans         &trans    &trans     &trans  &trans    &mmv MOVE_RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH   &kp PIPE
-&kp C_MUTE     &trans         &trans    &trans     &trans  &trans    &mkp LCLK        &trans            &mo 3              &trans          &trans           &trans
+&kp C_MUTE     &trans         &trans    &trans     &trans  &trans    &mkp LCLK        &trans            &trans             &trans          &trans           &trans
             >;
 
             display-name = "layer1";
@@ -100,7 +100,7 @@
 &trans  &trans     &trans     &trans     &kp LC(R)  &trans    &mmv MOVE_DOWN   &trans            &trans      &trans        &trans        &kp MINUS      &kp EQUAL
 &trans  &kp LC(A)  &trans     &trans     &kp LC(F)  &trans    &mmv MOVE_LEFT   &trans            &trans      &trans        &trans        &kp LS(UNDER)  &kp LS(PLUS)
 &trans  &kp LC(A)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &mmv MOVE_RIGHT  &kp LBKT          &kp RBKT    &kp LS(LBRC)  &kp LS(RBRC)  &kp BSLH       &kp LS(PIPE)
-&trans  &trans     &trans     &trans     &mo 3      &trans    &mkp LCLK        &trans            &trans      &trans        &trans        &trans
+&trans  &trans     &trans     &trans     &trans     &trans    &mkp LCLK        &trans            &trans      &trans        &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -118,12 +118,21 @@
 
         layer_4 {
             bindings = <
-&to 0   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans  &trans           &trans           &trans      &trans     &trans       &trans
+&to 0   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans  &studio_unlock   &trans           &trans      &trans     &trans       &trans
 &trans  &bt BT_CLR      &bt BT_CLR_ALL   &trans           &trans           &trans             &trans  &trans           &trans           &trans      &trans     &trans       &trans
 &trans  &out OUT_USB    &out OUT_BLE     &trans           &trans           &trans             &trans  &trans           &trans           &trans      &trans     &trans       &trans
 &trans  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &trans  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &sys_reset  &soft_off  &bootloader  &trans
 &trans  &trans          &trans           &trans           &trans           &trans             &trans  &trans           &trans           &trans      &trans     &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        goto3 {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
