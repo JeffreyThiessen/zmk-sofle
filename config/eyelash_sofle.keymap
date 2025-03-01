@@ -87,7 +87,7 @@
 &kp LS(GRAVE)  &kp LC(SLASH)  &kp UP    &trans     &trans  &trans    &mmv MOVE_DOWN   &kp PG_UP         &kp END            &kp UP          &kp HOME         &kp MINUS       &kp EQUAL
 &kp LEFT_GUI   &kp LEFT       &kp DOWN  &kp RIGHT  &trans  &trans    &mmv MOVE_LEFT   &kp PG_DN         &kp LEFT           &kp DOWN        &kp RIGHT        &kp UNDERSCORE  &kp PLUS
 &trans         &trans         &trans    &trans     &trans  &trans    &mmv MOVE_RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH   &kp PIPE
-&kp C_MUTE     &trans         &trans    &trans     &trans  &trans    &mkp LCLK        &trans            &trans             &mo 3           &trans           &trans
+&kp C_MUTE     &trans         &trans    &trans     &trans  &trans    &mkp LCLK        &trans            &mo 3              &trans          &trans           &trans
             >;
 
             display-name = "layer1";
@@ -100,7 +100,7 @@
 &trans  &trans     &trans     &trans     &kp LC(R)  &trans    &mmv MOVE_DOWN   &trans            &trans      &trans        &trans        &kp MINUS      &kp EQUAL
 &trans  &kp LC(A)  &trans     &trans     &kp LC(F)  &trans    &mmv MOVE_LEFT   &trans            &trans      &trans        &trans        &kp LS(UNDER)  &kp LS(PLUS)
 &trans  &kp LC(A)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &mmv MOVE_RIGHT  &kp LBKT          &kp RBKT    &kp LS(LBRC)  &kp LS(RBRC)  &kp BSLH       &kp LS(PIPE)
-&trans  &trans     &trans     &mo 3      &trans     &trans    &mkp LCLK        &trans            &trans      &trans        &trans        &trans
+&trans  &trans     &trans     &trans     &mo 3      &trans    &mkp LCLK        &trans            &trans      &trans        &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
