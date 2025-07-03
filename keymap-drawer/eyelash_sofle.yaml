@@ -64,7 +64,7 @@ layers:
   - '2'
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - MENU
+  - Gui+RWIN
   layer1:
   - {t: '`', s: '~'}
   - F1
@@ -92,7 +92,7 @@ layers:
   - END
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
